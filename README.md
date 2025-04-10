@@ -26,3 +26,17 @@ This project was built using HTML, CSS, and JavaScript with a focus on clean UI/
 - **📂 Category Handling:** Organize categories (student, staff, etc.)
 - **🔍 Search Feature:** Quickly search and filter records.
 - **📈 Reports (Optional):** View system usage reports (coming soon).
+
+## 🛠️ Tech Stack
+
+| Layer     | Technology         |
+|-----------|--------------------|
+| Frontend  | HTML5, CSS3, JavaScript |
+| Design    | Figma (UI Prototypes) |
+| Hosting (Optional) | GitHub Pages |
+| IDE       | Visual Studio Code |
+
+---
+![BusPassHub Preview](Images/main.png)
+![BusPassHub Preview](Images/home.png)
+![BusPassHub Preview](Images/contact.png)
