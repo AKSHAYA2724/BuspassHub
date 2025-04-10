@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="admin-dashboard.css" rel="stylesheet">
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="Images/profile.png" alt="Admin Profile">
+            <h2>Admin Name</h2>
+        </div>
+        <ul>
+            <li onclick="showSection('dashboard')">Dashboard</li>
+            <li onclick="showSection('category-management')">Category Management</li>
+            <li onclick="showSection('manage-passes')">Manage Passes</li>
+            <li onclick="showSection('update-pages')">Update Pages</li>
+            <li onclick="showSection('user-enquiries')">User Enquiries</li>
+            <li onclick="showSection('search-pass')">Search Pass</li>
+            <li onclick="showSection('logout')">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="section">
+            <h1>Dashboard</h1>
+            <div class="dashboard">
+                <div class="card" style="background-color: #ff6b6b; color: white;">4 Total Categories</div>
+                <div class="card" style="background-color: #feca57; color: white;">6 Total Passes</div>
+                <div class="card" style="background-color: #48dbfb; color: white;">0 Passes Created Yesterday</div>
+                <div class="card" style="background-color: #1dd1a1; color: white;">3 Passes Created in Seven Days</div>
+            </div>
+        </div>
+
+        <!-- Category Management Section -->
+        <div id="category-management" class="section hidden">
+            <h1>Category Management</h1>
+            <form>
+                <label>Category Name:</label>
+                <input type="text" placeholder="Enter new category">
+                <button type="submit">Add Category</button>
+            </form>
+            <h3>Existing Categories:</h3>
+            <div class="category-item">
+                <span>Student Pass</span>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            
+        </div>
+
+        <!-- Manage Passes Section -->
+        <div id="manage-passes" class="section hidden">
+            <h1>Manage Passes</h1>
+            <table border="1">
+                <tr>
+                    <th>Pass ID</th>
+                    <th>User</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>#001</td>
+                    <td>Ravi Kumar</td>
+                    <td>Student</td>
+                    <td>Active</td>
+                    <td><button>View</button> <button>Deactivate</button></td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Priya S</td>
+                    <td>Employee</td>
+                    <td>Expired</td>
+                    <td><button>Renew</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Update Pages Section -->
+        <div id="update-pages" class="section hidden">
+            <h1>Update Pages</h1>
+            <form>
+                <label>Select Page:</label>
+                <select>
+                    <option>Home</option>
+                    <option>About</option>
+                    <option>Contact</option>
+                </select>
+                <br><br>
+                <label>Content:</label>
+                <textarea rows="5" cols="50" placeholder="Edit content here..."></textarea>
+                <br>
+                <button type="submit">Update Page</button>
+            </form>
+        </div>
+
+        <!-- User Enquiries Section -->
+        <div id="user-enquiries" class="section hidden">
+            <h1>User Enquiries</h1>
+            <ul>
+                <li><strong>Arun:</strong> How do I renew my pass? <button>Reply</button></li>
+                <li><strong>Sneha:</strong> I didn’t receive confirmation. <button>Reply</button></li>
+            </ul>
+        </div>
+
+        <!-- Search Pass Section -->
+        <div id="search-pass" class="section hidden">
+            <h1>Search Pass</h1>
+            <form>
+                <input type="text" placeholder="Enter Pass ID or User Name">
+                <button type="submit">Search</button>
+            </form>
+            <div class="search-result">
+                <h3>Result:</h3>
+                <p>Pass ID: #001<br>User: Ravi Kumar<br>Status: Active<br>Valid Till: 12-Apr-2025</p>
+            </div>
+        </div>
+
+        <!-- Logout Section -->
+        <div id="logout" class="section hidden">
+            <h1>Logout</h1>
+            <p>You have been successfully logged out. Please <a href="login.html">click here</a> to login again.</p>
+        </div>
+    </div>
+</body>
+</html>

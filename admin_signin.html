@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #647c9b, #10243a);
+        }
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            display: none; /* Hidden by default */
+        }
+
+        h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #1f3b57;
+            color: white;
+            text-align: center;
+        }
+
+        .input-box::placeholder {
+            color: #aaa;
+        }
+
+        .btn {
+            width: 60%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #FFD700;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #e6c200;
+        }
+
+        .toggle-text {
+            margin-top: 15px;
+            color: white;
+        }
+
+        .toggle-text a {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .toggle-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Show login by default */
+        body:not(:has(:target)) #login,
+        #login:target {
+            display: block;
+        }
+
+        /* Show signup when targeted */
+        #signup:target {
+            display: block;
+        }
+
+        /* Hide login when signup is active */
+        #signup:target ~ #login {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <div class="container" id="login">
+        <h2>Admin Login</h2>
+        <input type="email" class="input-box" placeholder="Email">
+        <input type="password" class="input-box" placeholder="Password">
+        <a href="admin-dashboard.html" class="btn">Login</a>
+        <p class="toggle-text">Don't have an account? <a href="#signup">Sign Up</a></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="container" id="signup">
+        <h2>Sign Up</h2>
+        <input type="text" class="input-box" placeholder="Full Name">
+        <input type="email" class="input-box" placeholder="Email">
+        <input type="password" class="input-box" placeholder="Password">
+        <a href="admin-dashboard.html" class="btn">Sign Up</a>
+        <p class="toggle-text">Already have an account? <a href="#login">Login</a></p>
+    </div>
+
+</body>
+</html>

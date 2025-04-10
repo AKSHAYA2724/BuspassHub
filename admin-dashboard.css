@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2f3542;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar .profile {
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #fff;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #57606f;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+/* Dashboard Cards */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+form button {
+    background-color: #1dd1a1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #10ac84;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #57606f;
+    color: white;
+}
+
+table td button {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+table td button:hover {
+    opacity: 0.8;
+}
+
+button {
+    background-color: #2e86de;
+    color: white;
+}
+
+/* List Styling */
+ul li {
+    margin-bottom: 10px;
+}
+
+.search-result {
+    margin-top: 20px;
+    background-color: #dff9fb;
+    padding: 15px;
+    border-left: 5px solid #1e90ff;
+    border-radius: 8px;
+}
+
+/* Category Management Styling */
+/* Category Management Styling */
+.category-list {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category-list h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.category-item {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f1f2f6;
+    border-radius: 8px;
+}
+
+.category-item span {
+    flex-grow: 1;
+}
+
+/* Style for Edit & Delete Buttons */
+.category-item button {
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-item button.edit-btn {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.category-item button.delete-btn {
+    background-color: #ff4757;
+    color: #fff;
+}
+
+.category-item button:hover {
+    opacity: 0.9;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0069d9;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* User Enquiries Section */
+.enquiry-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.enquiry-item strong {
+    color: #444;
+}
+
+.reply-btn {
+    margin-left: 10px;
+    background-color: #17a2b8;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    background-color: #138496;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}

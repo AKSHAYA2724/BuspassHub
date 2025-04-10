@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusPassHub - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".cta-button").addEventListener("click", function() {
+                document.querySelector(".main-content").scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</head>
+<body>
+  
+    <nav>
+        <h3 class="sidebar-heading">Welcome to BusPassHub</h3>
+        <div class="sidebar-welcome-message">Your reliable bus pass management system!</div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="addpass.html"><i class="fas fa-plus-circle"></i> Add Pass</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+        </ul>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a>
+            <a href="terms.html"><i class="fas fa-file-alt"></i> Terms of Service</a>
+        </div>
+    </nav>
+    
+
+    <div class="hero">
+        <h2>Effortlessly Manage Your Bus Passes</h2>
+        <p>Experience hassle-free bus pass management with our all-in-one platform.</p>
+        <button class="cta-button">Get Started</button>
+    </div>
+
+    <div class="main-content">
+        <h2>Why Choose BusPassHub?</h2>
+        <p>We provide a simple and convenient way for commuters to manage their bus passes online.</p>
+        <div class="features">
+            <div class="feature-box">
+                <h3>Seamless Application</h3>
+                <p>Apply for bus passes with just a few clicks.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Easy Renewal</h3>
+                <p>Renew your bus pass anytime, anywhere.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Real-Time Updates</h3>
+                <p>Receive real-time notifications about bus schedules.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Secure Payments</h3>
+                <p>Fast and secure payment options for your bus passes.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Eco-Friendly</h3>
+                <p>Go green with digital passes, reducing paper waste.</p>
+            </div>
+            <div class="feature-box">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BusPassHub. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
